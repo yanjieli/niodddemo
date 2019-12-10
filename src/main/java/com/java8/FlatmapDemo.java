@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 public class FlatmapDemo {
 
 	public static void main(String[] args) {
-		String data[][] = new String[][] { { "1", "2" }, { "3", "4" } };
+		String data[][] = new String[][] { { "1", "2", "3" }, { "3", "4" } };
 		Stream<String[]> temp = Arrays.stream(data);
 //		temp.filter(x -> x.length > 0);
 		Stream<String> stringStream = temp.flatMap(x -> Arrays.stream(x));
